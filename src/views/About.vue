@@ -6,7 +6,7 @@
 /**
  * @description
  * @fileName About.vue
- * @author wb_maqianbo@meituan.com
+ * @author maqianbo
  * @date 2022/08/14 21:12:57
  * @version
  */

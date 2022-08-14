@@ -13,7 +13,7 @@
 /**
  * @description 左侧导航栏
  * @fileName index.vue
- * @author wb_maqianbo@meituan.com
+ * @author maqianbo
  * @date 2022/08/01 19:42:21
  * @version
  */
