@@ -1,32 +1,58 @@
 <template>
     <div id="app">
-        <div id="nav">
-            <router-link to="/">Home</router-link> |
-            <router-link to="/about">About</router-link>
-        </div>
-        <router-view />
+        <header>vue2.0-template</header>
+        <section class="content">
+            <nav>
+                <slide-nav />
+            </nav>
+            <article>
+                <router-view />
+            </article>
+        </section>
     </div>
 </template>
 
+<script lang="ts">
+/**
+ * @description App首页
+ * @fileName App.vue
+ * @author wb_maqianbo@meituan.com
+ * @date 2022/08/01 19:42:21
+ * @version
+ */
+
+import { Component, Vue } from 'vue-property-decorator';
+import SlideNav from '@/views/slide-nav/index.vue';
+@Component({
+    components: {
+        SlideNav,
+    },
+})
+export default class index extends Vue {}
+</script>
+
 <style lang="less">
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
-
-#nav {
-    padding: 30px;
-
-    a {
-        font-weight: bold;
-        color: #2c3e50;
-
-        &.router-link-exact-active {
-            color: #42b983;
-        }
+header {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: @bg-theme;
+    border-bottom: 1px solid #ededed;
+}
+.content {
+    flex: 1;
+    display: flex;
+    article {
+        flex: 1;
+        overflow: hidden;
+        padding: 10px;
     }
 }
 </style>

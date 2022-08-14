@@ -1,4 +1,5 @@
 // vue.config.js
+const path = require('path');
 const CompressionWebpackPlugin = require('compression-webpack-plugin'); // 开启gzip压缩， 按需引用
 const productionGzipExtensions = /\.(js|css|json|txt|html|ico|svg)(\?.*)?$/i; // 开启gzip压缩， 按需写入
 const merge = require('webpack-merge');
@@ -24,6 +25,12 @@ module.exports = {
     // parallel: require('os').cpus().length > 1,
     parallel: false,
     // 是否为 Babel 或 TypeScript 使用 thread-loader。该选项在系统的 CPU 有多于一个内核时自动启用，仅作用于生产构建。
+    pluginOptions: {
+        'style-resources-loader': {
+            preProcessor: 'less',
+            patterns: [path.resolve(__dirname, './src/style/variable.less')],
+        },
+    },
     chainWebpack: config => {
         config.resolve.symlinks(true); // 修复热更新失效
         // 如果使用多页面打包，使用vue inspect --plugins查看html是否在结果数组中

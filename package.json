@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "serve": "vue-cli-service serve --mode development",
+        "serve": "vue-cli-service serve",
         "build": "vue-cli-service build --mode production",
         "lint": "vue-cli-service lint",
         "prepare": "husky install",
@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "core-js": "^3.6.5",
+        "element-ui": "^2.15.9",
         "vue": "^2.6.11",
         "vue-class-component": "^7.2.3",
         "vue-property-decorator": "^9.1.2",
@@ -44,8 +45,10 @@
         "less-loader": "^5.0.0",
         "lint-staged": "^12.4.1",
         "prettier": "^2.2.1",
+        "style-resources-loader": "^1.5.0",
         "ts-import-plugin": "^2.0.0",
         "typescript": "~4.1.5",
+        "vue-cli-plugin-style-resources-loader": "^0.1.5",
         "vue-template-compiler": "^2.6.11"
     },
     "config": {
