@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <header>vue2.0-template</header>
+        <header>vue2.0</header>
         <section class="content">
             <nav>
                 <slide-nav />
@@ -22,7 +22,7 @@
  */
 
 import { Component, Vue } from 'vue-property-decorator';
-import SlideNav from '@/views/slide-nav/index.vue';
+import SlideNav from './views/slide-nav/index.vue';
 @Component({
     components: {
         SlideNav,

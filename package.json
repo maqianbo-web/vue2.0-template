@@ -7,7 +7,7 @@
         "build": "vue-cli-service build --mode production",
         "lint": "vue-cli-service lint",
         "prepare": "husky install",
-        "commit": "git-cz"
+        "commit": "npm run lint && git add --all && git-cz"
     },
     "dependencies": {
         "core-js": "^3.6.5",

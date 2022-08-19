@@ -19,7 +19,7 @@
  */
 
 import { Component, Vue } from 'vue-property-decorator';
-import { routes } from '@/router/index';
+import { routes } from '../../router/index';
 import { RouteConfig } from 'vue-router';
 import MenuList from './MenuList.vue';
 @Component({
