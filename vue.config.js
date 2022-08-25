@@ -18,12 +18,12 @@ const getPages = () => {
             title: '首页',
             chunks: ['chunk-vendors', 'chunk-common', 'index'],
         },
-        'two-page': {
-            entry: 'src/pages/two-page/main.ts', // page 的入口
+        second: {
+            entry: 'src/pages/second/main.ts', // page 的入口
             template: 'public/index.html', // 模板来源
-            filename: 'two-page.html',
+            filename: 'second.html',
             title: '第二页面',
-            chunks: ['chunk-vendors', 'chunk-common', 'two-page'],
+            chunks: ['chunk-vendors', 'chunk-common', 'second'],
         },
     };
 };
