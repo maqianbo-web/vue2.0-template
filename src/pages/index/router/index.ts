@@ -6,12 +6,12 @@ Vue.use(VueRouter);
 export const routes: Array<RouteConfig> = [
     {
         path: '/',
-        name: 'Home',
+        name: 'Map',
         meta: {
-            name: '首页',
+            name: '地图',
             icon: 'el-icon-menu',
         },
-        component: resolve => require(['../views/Home.vue'], resolve),
+        component: resolve => require(['../views/map/index.vue'], resolve),
     },
     {
         path: '/about',

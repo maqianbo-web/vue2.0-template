@@ -10,4 +10,11 @@ declare global {
             [elem: string]: any;
         }
     }
+
+    interface Window {
+        _AMapSecurityConfig: {
+            securityJsCode: string;
+        };
+        map: any;
+    }
 }

@@ -10,6 +10,7 @@
         "commit": "npm run lint && git add --all && git-cz"
     },
     "dependencies": {
+        "@amap/amap-jsapi-loader": "^1.0.1",
         "core-js": "^3.6.5",
         "element-ui": "^2.15.9",
         "vue": "^2.6.11",

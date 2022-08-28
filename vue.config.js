@@ -31,7 +31,7 @@ const getPages = () => {
 const getDevServe = () => {
     return {
         overlay: {
-            warnings: true, // 让浏览器 overlay 同时显示警告和错误
+            warnings: false, // 让浏览器 overlay 同时显示警告和错误
             errors: true,
         },
         https: false, // https:{type:Boolean}
