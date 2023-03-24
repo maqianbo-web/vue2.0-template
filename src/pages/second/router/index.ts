@@ -11,7 +11,7 @@ export const routes: Array<RouteConfig> = [
             name: '首页',
             icon: 'el-icon-menu',
         },
-        component: resolve => require(['../views/Home.vue'], resolve),
+        component: (resolve) => require(['../views/Home.vue'], resolve),
     },
     {
         path: '/about',
@@ -20,7 +20,7 @@ export const routes: Array<RouteConfig> = [
             name: '分页',
             icon: 'el-icon-menu',
         },
-        component: resolve => require(['../views/About.vue'], resolve),
+        component: (resolve) => require(['../views/About.vue'], resolve),
     },
 ];
 

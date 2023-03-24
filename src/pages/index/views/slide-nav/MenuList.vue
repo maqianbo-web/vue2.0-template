@@ -2,11 +2,7 @@
     <div>
         <template v-for="menu in menus">
             <!-- 类型为菜单时，使用 el-submenu -->
-            <el-submenu
-                v-if="menu.children && menu.children.length"
-                :index="menu.path"
-                :key="menu.path"
-            >
+            <el-submenu v-if="menu.children && menu.children.length" :index="menu.path" :key="menu.path">
                 <template slot="title">
                     <i :class="menu.meta.icon"></i>
                     <span slot="title">{{ menu.meta.name }}</span>

@@ -7,7 +7,7 @@
         "build": "vue-cli-service build --mode production",
         "lint": "vue-cli-service lint",
         "prepare": "husky install",
-        "commit": "npm run lint && git add --all && git-cz"
+        "commit": "git add --all && git-cz"
     },
     "dependencies": {
         "@amap/amap-jsapi-loader": "^1.0.1",
@@ -56,5 +56,15 @@
         "commitizen": {
             "path": "node_modules/cz-customizable"
         }
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ],
+    "lint-staged": {
+        "*.{js,jsx,vue,ts,tsx}": [
+            "npm run lint"
+        ]
     }
 }

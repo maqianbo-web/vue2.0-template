@@ -28,7 +28,7 @@ export default class MapMain extends Vue {
             version: '2.0', // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
             plugins: [], // 需要使用的的插件列表，如比例尺'AMap.Scale'等
         })
-            .then(AMap => {
+            .then((AMap) => {
                 this.$nextTick(() => {
                     this.AMap = AMap;
                     this.map = new this.AMap.Map('container', {
@@ -43,7 +43,7 @@ export default class MapMain extends Vue {
                     this.setCircle();
                 });
             })
-            .catch(e => {
+            .catch((e) => {
                 console.log(e);
             });
     }
@@ -53,11 +53,7 @@ export default class MapMain extends Vue {
             const h = this.$createElement;
             this.$notify({
                 title: '点击地图图层，获取经纬度',
-                message: h(
-                    'i',
-                    { style: 'color: teal' },
-                    `经度${e.lnglat.getLng()},纬度${e.lnglat.getLat()}`,
-                ),
+                message: h('i', { style: 'color: teal' }, `经度${e.lnglat.getLng()},纬度${e.lnglat.getLat()}`),
             });
         });
     }
